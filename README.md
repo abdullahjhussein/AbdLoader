@@ -4,10 +4,13 @@ Network Loading Library [Image , JSON]
 
 # Setup AbdLoader Library
 
-Import package folder [abdloader] to you project.
-Add this line to your gradle file in app module: implementation project(path: ':abdloader')
+1. Import package folder [abdloader] to you project as Android Module.
 
-1. In Application File:
+2.Add this line to your gradle file in app module: 
+        
+        implementation project(path: ':abdloader')
+
+3. In Application File:
 
 Initialize the AbdLoader with max cache size.
         
@@ -21,7 +24,7 @@ Initialize the AbdLoader with specific cache size.
         mAbdLoaderConfig.memoryCache = AbdLoaderMemoryCache(maxCache)
         AbdLoader.initialize(this, mAbdLoaderConfig)
        
-2. Load File : 
+4. Load File : 
 
           GlobalScope.launch {
               getData()
@@ -40,6 +43,6 @@ Initialize the AbdLoader with specific cache size.
         }
 
 
-3.Load Image:
+5.Load Image:
         
         AbdLoader.loadImage(url, imageView)
