@@ -1,0 +1,2 @@
+include ':app', ':abdloader'
+rootProject.name='Abd Loader Test'
